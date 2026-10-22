@@ -22,4 +22,4 @@ def lowrank_decompose(A: torch.Tensor, rank: int = None) -> tuple:
     s = s[:rank]
     VT = VT[:rank, :]
 
-    return U, s[:, None] @ VT
+    return U, s[:, None] * VT
